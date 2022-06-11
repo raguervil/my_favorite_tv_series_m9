@@ -35,6 +35,11 @@
     <%= collection_select(:tv_show, :nationality_id, Nationality.all, :id, :name, prompt: true) %>
   </div>
 
+  <div class="field">
+    <%#= form.collection_select(:genre_ids, Genre.all, :id, :name,{ prompt: true }, { multiple: true }) %>
+    <%= form.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+  </div>
+
   <fieldset style="width:270px">
     <legend>Film locations</legend>
 
